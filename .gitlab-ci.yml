@@ -1,4 +1,4 @@
-image: node:10.16.1 #specify to your node version
+image: node:10.16.1 #specify your node version
 
 pages:
   stage: deploy
