@@ -1,0 +1,16 @@
+image: node:10.16.1 #specify to your node version
+
+pages:
+  stage: deploy
+  script:
+  - yarn cache clean -f
+  - yarn
+  - unset CI
+  - yarn run build
+  - rm -rf public
+  - mv build public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
